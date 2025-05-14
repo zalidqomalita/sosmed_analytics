@@ -1,0 +1,17 @@
+streamlit==1.37.1
+transformers==4.41.2
+torch==2.4.1
+huggingface_hub==0.23.1
+nltk
+Sastrawi
+pandas
+joblib
+deep-translator
+altair==5.0.1
+matplotlib
+wordcloud
+plotly
+Pillow
+sqlalchemy
+pymysql
+scikit-learn
