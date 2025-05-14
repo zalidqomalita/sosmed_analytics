@@ -24,6 +24,7 @@ from huggingface_hub import hf_hub_download
 import pandas as pd
 from sqlalchemy import create_engine, text
 from datetime import datetime, timedelta
+import psutil
 
 
 #######################
@@ -148,7 +149,8 @@ def predict_sentiments(sentences):
     model = BertClassifier(num_labels=3)
     model.load_state_dict(torch.load(model_path,map_location=torch.device('cpu')))
     model.to(device)
-
+    st.write(f"Memory Usage Before Prediction: {psutil.virtual_memory().percent}%")
+    
     model.eval()  
     max_length = 256 
 
